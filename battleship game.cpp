@@ -4,11 +4,7 @@ using namespace std;
 
 bool randomtruefalse() {
     int r = rand() % 2;
-    if (r == 1){
-        return 1;
-    }else{
-        return 0;
-    }
+    return r == 1 ? 0 : 1;
 }
 
 int main() {
