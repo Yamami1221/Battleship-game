@@ -11,8 +11,8 @@ int main() {
     int BH = 0,BW = 0,shipcount = 0,i = 0,j = 0,k = 0,row = 0,column = 0,turns = 0;
     cout << "Welcome to battle ship game!" << endl;
     cout << "Let's specify size of board" << endl;
-    cout << "Enter board hight: "; cin >> BH;
-    cout << "Enter board width: "; cin >> BW;
+    cout << "Enter board hight: "; cin >> BH; fflush(stdin);
+    cout << "Enter board width: "; cin >> BW; fflush(stdin);
     bool ships[BH][BW];
     for (i = 0; i < BH; i++){
         for (j = 0; j < BW; j++) {
@@ -28,13 +28,13 @@ int main() {
     while (k < limit){
         cout << "Enter coordinates" << endl;
         while (row < 1 || row > BW){
-            cout << "Enter row (1 to " << BW << "): "; cin >> row;
+            cout << "Enter row (1 to " << BW << "): "; cin >> row; fflush(stdin);
             if (row < 1 || row > BW){
                 cout << "Invalid input, try again." << endl;
             }
         }
         while (column < 1 || column > BH){
-            cout << "Enter column (1 to " << BH << "): "; cin >> column;
+            cout << "Enter column (1 to " << BH << "): "; cin >> column; fflush(stdin);
             if (column < 1 || column > BH){
                 cout << "Invalid input, try again." << endl;
             }
